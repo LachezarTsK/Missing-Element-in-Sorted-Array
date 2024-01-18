@@ -12,7 +12,7 @@ public class Solution
         {
             int middlePoint = left + (right - left) / 2;
 
-            if (target > missingElementsTillCurrentIndex(input, middlePoint))
+            if (target > MissingElementsTillCurrentIndex(input, middlePoint))
             {
                 left = middlePoint + 1;
             }
@@ -24,7 +24,7 @@ public class Solution
         return input[0] + right + target;
     }
 
-    private int missingElementsTillCurrentIndex(int[] input, int index)
+    private int MissingElementsTillCurrentIndex(int[] input, int index)
     {
         int expectedNumberOfPreceedingElements = input[index] - input[0];
         return expectedNumberOfPreceedingElements - index;
